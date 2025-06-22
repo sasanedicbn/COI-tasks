@@ -22,3 +22,5 @@ class ImageTextSection extends HTMLElement {
     this.appendChild(section);
   }
 }
+
+customElements.define("image-text-section", ImageTextSection);
