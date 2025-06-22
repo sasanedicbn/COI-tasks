@@ -12,3 +12,13 @@
 // then it hide it when we scroll past the section. Going back will again reveal it.
 // 9. Bonus: Wrap section with custom element, define it in JS and write toggle function inside
 // its constructor
+
+class ImageTextSection extends HTMLElement {
+  constructor() {
+    super();
+    const section = document.createElement("section");
+    section.className = "image-text";
+
+    this.appendChild(section);
+  }
+}
