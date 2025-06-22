@@ -25,6 +25,11 @@ class ImageTextSection extends HTMLElement {
     img.src = "./public/model-img.png";
     img.alt = "Model women image";
 
+    const title = document.createElement("h4");
+    title.className = "image-text__title";
+    title.textContent = "Handcrafted and Responsibly Sourced";
+
+    section.appendChild(title);
     section.appendChild(img);
 
     this.appendChild(section);
