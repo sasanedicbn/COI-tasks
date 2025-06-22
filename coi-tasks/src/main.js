@@ -17,13 +17,21 @@
 class ImageTextSection extends HTMLElement {
   constructor() {
     super();
+
     const section = document.createElement("section");
     section.className = "image-text";
 
+    const left = document.createElement("div");
+    left.className = "image-text__left";
+
     const img = document.createElement("img");
     img.className = "image-text__image";
-    img.src = "./public/model-img.png";
-    img.alt = "Model women image";
+    img.src = "/model-img.png";
+    img.alt = "Model woman image";
+    left.appendChild(img);
+
+    const right = document.createElement("div");
+    right.className = "image-text__right";
 
     const title = document.createElement("h4");
     title.className = "image-text__title";
@@ -38,11 +46,9 @@ class ImageTextSection extends HTMLElement {
     button.className = "image-text__button";
     button.textContent = "Learn more";
 
-    section.appendChild(img);
-    section.appendChild(title);
-    section.appendChild(description);
-    section.appendChild(button);
+    right.append(title, description, button);
 
+    section.append(left, right);
     this.appendChild(section);
   }
 }
