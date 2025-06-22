@@ -29,8 +29,19 @@ class ImageTextSection extends HTMLElement {
     title.className = "image-text__title";
     title.textContent = "Handcrafted and Responsibly Sourced";
 
-    section.appendChild(title);
+    const description = document.createElement("p");
+    description.className = "image-text__description";
+    description.textContent =
+      "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. ";
+
+    const button = document.createElement("button");
+    button.className = "image-text__button";
+    button.textContent = "Learn more";
+
     section.appendChild(img);
+    section.appendChild(title);
+    section.appendChild(description);
+    section.appendChild(button);
 
     this.appendChild(section);
   }
