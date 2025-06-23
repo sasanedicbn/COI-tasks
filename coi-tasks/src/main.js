@@ -12,7 +12,6 @@
 // then it hide it when we scroll past the section. Going back will again reveal it.
 // 9. Bonus: Wrap section with custom element, define it in JS and write toggle function inside
 // its constructor
-// import } from '../public/model-img.png'
 
 class ImageTextSection extends HTMLElement {
   constructor() {
@@ -46,8 +45,11 @@ class ImageTextSection extends HTMLElement {
     button.className = "image-text__button";
     button.textContent = "Learn more";
 
-    right.append(title, description, button);
+    const textWrapper = document.createElement("div");
+    textWrapper.className = "image-text__text-group";
 
+    textWrapper.append(title, description, button);
+    right.append(textWrapper);
     section.append(left, right);
     this.appendChild(section);
   }

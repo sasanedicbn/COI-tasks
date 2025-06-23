@@ -7,22 +7,65 @@ body{
   background-color: #F5F5F5;
 }
 .image-text {
-  max-width: 600px;
+  background-color: orange;
+  max-width: 1440px;
   display: grid;
-  grid-template-columns: 1fr 200px;
-  padding: 20px;
+  grid-template-columns: 1fr 1fr;
   font-family: sans-serif;
 }
+.image-text__right{
+  width: 720px;
+  height: 576px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  gap: 14px;
+}
 .image-text__image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  width: 720px;
+  height: 576px;
+  
 }
 .image-text__title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-weight: 275;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: uppercase;
 }
+
 .image-text__description {
-  font-size: 16px;
-  color: #555;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.image-text__button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+}
+
+.image-text__button {
+  padding: 12px 24px;
+  font-size: 18px;      
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  width: 170px;      
+  height: 52px;         
+  text-align: center;
+}
+
+.image-text__textWrapper{
+  width: 517px;
+  height: 337px;
 }
