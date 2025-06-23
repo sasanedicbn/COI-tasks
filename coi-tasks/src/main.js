@@ -48,6 +48,12 @@ class ImageTextSection extends HTMLElement {
     const textWrapper = document.createElement("div");
     textWrapper.className = "image-text__text-group";
 
+    const secondDescription = document.createElement("p");
+    secondDescription.className =
+      "image-text__description image-text__description--hidden";
+    secondDescription.textContent =
+      "This is additional description that toggles with animation on click.";
+
     textWrapper.append(title, description, button);
     right.append(textWrapper);
     section.append(left, right);
