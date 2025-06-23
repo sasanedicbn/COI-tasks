@@ -54,10 +54,25 @@ class ImageTextSection extends HTMLElement {
     secondDescription.textContent =
       "This is additional description that toggles with animation on click.";
 
-    textWrapper.append(title, description, button);
+    textWrapper.append(title, description, secondDescription, button);
     right.append(textWrapper);
     section.append(left, right);
     this.appendChild(section);
+
+    let expanded = false;
+    button.addEventListener("click", () => {
+      expanded = !expanded;
+
+      if (expanded) {
+        secondDescription.classList.remove("image-text__description--hidden");
+        secondDescription.classList.add("image-text__description--visible");
+        button.textContent = "Show less";
+      } else {
+        secondDescription.classList.remove("image-text__description--visible");
+        secondDescription.classList.add("image-text__description--hidden");
+        button.textContent = "Learn more";
+      }
+    });
   }
 }
 

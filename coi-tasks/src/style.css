@@ -62,13 +62,26 @@ body {
 
 .image-text__text-group {
   max-width: 512px;
-  height: 337px;
+  height: 347px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+/* THIS IS FOR TOGGLE BTN */
+.image-text__description--hidden {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.image-text__description--visible {
+  max-height: 1000px; 
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 
