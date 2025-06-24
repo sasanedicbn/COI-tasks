@@ -1,3 +1,5 @@
+// import {} from "../assets/cocktail-first.jpg";
+
 class RecipesSection extends HTMLElement {
   constructor() {
     super();
@@ -24,22 +26,62 @@ class RecipesSection extends HTMLElement {
     const cartWrapper = document.createElement("div");
     cartWrapper.className = "recipes-section__cart-wrapper";
 
-    const singleCart = document.createElement("div");
-    singleCart.className = "recipes-section__single-cart";
+    // const singleCart = document.createElement("div");
+    // singleCart.className = "recipes-section__single-cart";
 
-    const img = document.createElement("img");
-    img.className = "recipes-section__img";
-    img.src = "./coctail-first.jpg";
+    // const img = document.createElement("img");
+    // img.className = "recipes-section__img";
+    // img.src = "../../public/coctail-first.jpg";
 
-    img.alt = "Coctail photo";
+    // img.alt = "Coctail photo";
 
-    const imgTitle = document.createElement("span");
-    imgTitle.className = "recipes-section__cartWrapper-title";
-    imgTitle.textContent = "Sparkling Triple Citrus & Mint Mocktail";
+    // const imgTitle = document.createElement("span");
+    // imgTitle.className = "recipes-section__cartWrapper-title";
+    // imgTitle.textContent = "Sparkling Triple Citrus & Mint Mocktail";
 
-    cartWrapper.append(singleCart);
-    singleCart.append(img, imgTitle);
+    // cartWrapper.append(singleCart);
+    // singleCart.append(img, imgTitle);
     header.append(title, subtitle, button);
+
+    const createSingleCart = ({ imgSrc, imgAlt, titleText }) => {
+      const singleCart = document.createElement("div");
+      singleCart.className = "recipes-section__single-cart";
+
+      const img = document.createElement("img");
+      img.className = "recipes-section__img";
+      img.src = imgSrc;
+      img.alt = imgAlt;
+
+      const imgTitle = document.createElement("span");
+      imgTitle.className = "recipes-section__cart-wrapper-title";
+      imgTitle.textContent = titleText;
+
+      singleCart.append(img, imgTitle);
+      return singleCart;
+    };
+
+    const cardsData = [
+      {
+        imgSrc: "../../public/coctail-first.jpg",
+        imgAlt: "Coctail photo 1",
+        titleText: "Sparkling Triple Citrus & Mint Mocktail",
+      },
+      {
+        imgSrc: "../../public/coctail-second.png",
+        imgAlt: "Coctail photo 2",
+        titleText: "Classic Mojito Cocktail",
+      },
+      {
+        imgSrc: "../../public/coctail-threed.png",
+        imgAlt: "Coctail photo 3",
+        titleText: "Tropical Pineapple Punch",
+      },
+    ];
+
+    cardsData.forEach((card) => {
+      const singleCart = createSingleCart(card);
+      cartWrapper.appendChild(singleCart);
+    });
 
     section.append(header, cartWrapper);
     this.appendChild(section);
