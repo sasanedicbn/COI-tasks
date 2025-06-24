@@ -20,9 +20,28 @@ class RecipesSection extends HTMLElement {
     const button = document.createElement("button");
     button.className = "recipes-section__button";
     button.textContent = "View all recipes";
+    // -------------------------------------------------------------
+    const cartWrapper = document.createElement("div");
+    cartWrapper.className = "recipes-section__cart-wrapper";
 
+    const singleCart = document.createElement("div");
+    singleCart.className = "recipes-section__single-cart";
+
+    const img = document.createElement("img");
+    img.className = "recipes-section__img";
+    img.src = "./coctail-first.jpg";
+
+    img.alt = "Coctail photo";
+
+    const imgTitle = document.createElement("span");
+    imgTitle.className = "recipes-section__cartWrapper-title";
+    imgTitle.textContent = "Sparkling Triple Citrus & Mint Mocktail";
+
+    cartWrapper.append(singleCart);
+    singleCart.append(img, imgTitle);
     header.append(title, subtitle, button);
-    section.appendChild(header);
+
+    section.append(header, cartWrapper);
     this.appendChild(section);
   }
 }

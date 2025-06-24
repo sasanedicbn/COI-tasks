@@ -54,3 +54,12 @@ body {
   border: none;
   border-bottom: 1px solid black;
 }
+/* ------------------------- */
+.recipes-section__cart-wrapper{
+    max-width: 1312px;
+    height: 472px;
+}
+.recipes-section__single-cart{
+    width: 360px;
+    height: 472px;
+}
