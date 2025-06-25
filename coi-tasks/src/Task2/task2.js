@@ -45,19 +45,27 @@ class RecipesSection extends HTMLElement {
 
     const cardsData = [
       {
-        imgSrc: "../../public/coctail-first.jpg",
+        imgSrc: "/coctail-first.jpg",
         imgAlt: "Coctail photo 1",
         titleText: "Sparkling Triple Citrus & Mint Mocktail",
+        detailImg: [{ src: "/first-coctail-detail.png", class: "top-left" }],
       },
       {
-        imgSrc: "../../public/coctail-second.png",
+        imgSrc: "/coctail-second.png",
         imgAlt: "Coctail photo 2",
         titleText: "Classic Mojito Cocktail",
+        detailImg: [
+          { src: "/second-coctail-detail-top.png", class: "top-left" },
+          { src: "/second-coctail-detail-bottom.png", class: "bottom-right" },
+        ],
       },
       {
-        imgSrc: "../../public/coctail-threed.png",
+        imgSrc: "/coctail-threed.png",
         imgAlt: "Coctail photo 3",
         titleText: "Tropical Pineapple Punch",
+        detailImg: [
+          { src: "/threed-coctail-bottom-right.png", class: "bottom-right" },
+        ],
       },
     ];
 
