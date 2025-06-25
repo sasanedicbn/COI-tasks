@@ -101,24 +101,27 @@ body {
 
 .recipes-section__img-wrapper.top-left {
   top: 0;
-  left: -65px;
+  left: -118px;
+  z-index: -1;
 }
 
 .recipes-section__img-wrapper.bottom-right {
-  bottom: 0;
-  right: 0;
+  bottom: 32px;
+  right: -40px;
+  z-index: -1;
 }
 .recipes-section__img-wrapper.top-right{
-    top: 0;
-    right: -44.66px;
+    top: -16px;
+    right: -61px;
+    z-index: -1;
 }
 .recipes-section__img-wrapper.bottom-left{
-    bottom: 24px;
+    bottom: 32px;
     left: -74px;
+    z-index: -1;
 }
 .recipes-section__detail {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
