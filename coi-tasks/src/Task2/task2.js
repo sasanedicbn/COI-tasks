@@ -1,5 +1,3 @@
-// import {} from "../assets/cocktail-first.jpg";
-
 class RecipesSection extends HTMLElement {
   constructor() {
     super();
@@ -26,21 +24,6 @@ class RecipesSection extends HTMLElement {
     const cartWrapper = document.createElement("div");
     cartWrapper.className = "recipes-section__cart-wrapper";
 
-    // const singleCart = document.createElement("div");
-    // singleCart.className = "recipes-section__single-cart";
-
-    // const img = document.createElement("img");
-    // img.className = "recipes-section__img";
-    // img.src = "../../public/coctail-first.jpg";
-
-    // img.alt = "Coctail photo";
-
-    // const imgTitle = document.createElement("span");
-    // imgTitle.className = "recipes-section__cartWrapper-title";
-    // imgTitle.textContent = "Sparkling Triple Citrus & Mint Mocktail";
-
-    // cartWrapper.append(singleCart);
-    // singleCart.append(img, imgTitle);
     header.append(title, subtitle, button);
 
     const createSingleCart = ({ imgSrc, imgAlt, titleText }) => {
