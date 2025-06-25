@@ -1,3 +1,39 @@
+const cardsData = [
+  {
+    imgSrc: "../../public/coctail-first.jpg",
+    imgAlt: "Coctail photo 1",
+    titleText: "Sparkling Triple Citrus & Mint Mocktail",
+    detailImg: [
+      { src: "../../public/first-coctail-detail.png", class: "top-left" },
+    ],
+  },
+  {
+    imgSrc: "../../public/coctail-second.png",
+    imgAlt: "Coctail photo 2",
+    titleText: "Classic Mojito Cocktail",
+    detailImg: [
+      {
+        src: "../../public/second-coctail-detail-top.png",
+        class: "top-right",
+      },
+      {
+        src: "../../public/second-coctail-details-bottom.png",
+        class: "bottom-left",
+      },
+    ],
+  },
+  {
+    imgSrc: "../../public/coctail-threed.png",
+    imgAlt: "Coctail photo 3",
+    titleText: "Tropical Pineapple Punch",
+    detailImg: [
+      {
+        src: "../../public/threed-coctail-bottom-right-detail.png",
+        class: "bottom-right",
+      },
+    ],
+  },
+];
 class RecipesSection extends HTMLElement {
   constructor() {
     super();
@@ -60,43 +96,6 @@ class RecipesSection extends HTMLElement {
       singleCart.appendChild(imgTitle);
       return singleCart;
     };
-
-    const cardsData = [
-      {
-        imgSrc: "../../public/coctail-first.jpg",
-        imgAlt: "Coctail photo 1",
-        titleText: "Sparkling Triple Citrus & Mint Mocktail",
-        detailImg: [
-          { src: "../../public/first-coctail-detail.png", class: "top-left" },
-        ],
-      },
-      {
-        imgSrc: "../../public/coctail-second.png",
-        imgAlt: "Coctail photo 2",
-        titleText: "Classic Mojito Cocktail",
-        detailImg: [
-          {
-            src: "../../public/second-coctail-detail-top.png",
-            class: "top-right",
-          },
-          {
-            src: "../../public/second-coctail-details-bottom.png",
-            class: "bottom-left",
-          },
-        ],
-      },
-      {
-        imgSrc: "../../public/coctail-threed.png",
-        imgAlt: "Coctail photo 3",
-        titleText: "Tropical Pineapple Punch",
-        detailImg: [
-          {
-            src: "../../public/threed-coctail-bottom-right-detail.png",
-            class: "bottom-right",
-          },
-        ],
-      },
-    ];
 
     cardsData.forEach((card) => {
       const singleCart = createSingleCart(card);
