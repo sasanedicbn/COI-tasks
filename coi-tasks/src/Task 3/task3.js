@@ -33,6 +33,23 @@ class SimpleSwiper extends HTMLElement {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        540: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1049: {
+          slidesPerView: 2,
+        },
+        1052: {
+          slidesPerView: 3,
+        },
+      },
       on: {
         slideChange: () => {
           console.log(`Active slide index: ${this.swiper.realIndex}`);
