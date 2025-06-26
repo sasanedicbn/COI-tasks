@@ -2,6 +2,7 @@ class SimpleSwiper extends HTMLElement {
   constructor() {
     super();
     this.swiper = null;
+    this.isSwiperActive = false;
     this.section = document.createElement("section");
     this.section.className = "swiper-section";
 
@@ -16,6 +17,7 @@ class SimpleSwiper extends HTMLElement {
         <div class="swiper-button-prev"><img src="../../public/arrow-left.svg" alt="icon-arrow"/></div>
         <div class="swiper-button-next"><img src="../../public/arrow-right.svg" alt="icon-arrow"/></div>
       </div>
+      <button id="toggle-swiper">Toggle Swiper</button>
     `;
 
     this.appendChild(this.section);
@@ -23,6 +25,9 @@ class SimpleSwiper extends HTMLElement {
 
   connectedCallback() {
     this.initSwiper();
+    this.section
+      .querySelector("#toggle-swiper")
+      .addEventListener("click", () => this.toggleSwiper());
   }
 
   initSwiper() {
@@ -46,10 +51,29 @@ class SimpleSwiper extends HTMLElement {
       },
       on: {
         slideChange: () => {
-          console.log(`Active slide index: ${this.swiper.realIndex}`);
+          console.log(`Active: ${this.swiper.realIndex}`);
         },
       },
     });
+    this.isSwiperActive = true;
+  }
+
+  destroySwiper() {
+    if (this.swiper) {
+      this.swiper.destroy(true, true);
+      this.swiper = null;
+      this.isSwiperActive = false;
+    }
+  }
+
+  toggleSwiper() {
+    if (this.isSwiperActive) {
+      this.destroySwiper();
+      console.log("Swiper is destroyed.");
+    } else {
+      this.initSwiper();
+      console.log("Swiper is initialized.");
+    }
   }
 }
 
