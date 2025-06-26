@@ -19,13 +19,18 @@ class ImageTextSection extends HTMLElement {
 
     const section = document.createElement("section");
     section.className = "image-text";
+    section.style.opacity = "0";
+    section.style.transition = "opacity 0.5s ease";
+
+    this.style.margin = "200vh 0";
+    this.style.display = "block";
 
     const left = document.createElement("div");
     left.className = "image-text__left";
 
     const img = document.createElement("img");
     img.className = "image-text__image";
-    img.src = "/model-img.png";
+    img.src = "../../public/model-img.png";
     img.alt = "Model woman image";
     left.appendChild(img);
 
@@ -73,6 +78,24 @@ class ImageTextSection extends HTMLElement {
         button.textContent = "Learn more";
       }
     });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+          } else {
+            entry.target.style.opacity = "0";
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px",
+      }
+    );
+
+    observer.observe(section);
   }
 }
 
