@@ -37,16 +37,10 @@ class SimpleSwiper extends HTMLElement {
         0: {
           slidesPerView: 1,
         },
-        540: {
+        1400: {
           slidesPerView: 1,
         },
-        768: {
-          slidesPerView: 2,
-        },
-        1049: {
-          slidesPerView: 2,
-        },
-        1052: {
+        1401: {
           slidesPerView: 3,
         },
       },
