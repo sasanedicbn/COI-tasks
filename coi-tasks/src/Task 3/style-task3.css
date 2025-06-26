@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container {
+  max-width: 1440px;
+  height: 777px;
+  padding: 96px 0 96px 64px;
+  background-color: #f3ede5;
+}
+
+img {
+  width: 468px;
+  height: 585px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  padding: 8px;
+  background-color: #222222;
+  box-shadow: 0 4px 16px 0 rgba(26, 25, 25, 0.08);
+}
+
+.swiper .swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}

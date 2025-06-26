@@ -8,13 +8,13 @@ class SimpleSwiper extends HTMLElement {
     this.section.innerHTML = `
       <div class="swiper-container swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide"><img src="../../public/first-slide.png" alt="photo of men"/></div>
+          <div class="swiper-slide"><img src="../../public/second-slide.png" alt="photo of women"/></div>
+          <div class="swiper-slide"><img src="../../public/threed-slide.png" alt="photo of men"/></div>
+          <div class="swiper-slide"><img src="../../public/second-slide.png" alt="photo of women"/></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"><img src="../../public/arrow-left.svg" alt="icon-arrow"/></div>
+        <div class="swiper-button-next"><img src="../../public/arrow-right.svg" alt="icon-arrow"/></div>
       </div>
     `;
 
@@ -27,7 +27,8 @@ class SimpleSwiper extends HTMLElement {
 
   initSwiper() {
     this.swiper = new Swiper(".swiper", {
-      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 8,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
